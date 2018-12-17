@@ -10,6 +10,9 @@ var path = require('path');
 
 //load customers route
 var customers = require('./routes/customers'); 
+// load user route
+var user = require('./routes/user'); 
+
 var app = express();
 
 var connection  = require('express-myconnection'); 
@@ -53,15 +56,17 @@ app.use(
 
 
 
-app.get('/', routes.index);
+app.get('/', customers.list);
 app.get('/customers', customers.list);
 app.get('/customers/add', customers.add);
 app.post('/customers/add', customers.save);
 app.get('/customers/delete/:id', customers.delete_customer);
 app.get('/customers/edit/:id', customers.edit);
 app.post('/customers/edit/:id',customers.save_edit);
-
-
+// route for user
+app.get('/user/login', user.login);
+app.get('/user/add', user.add);
+app.post('/user/add', user.save);
 app.use(app.router);
 
 http.createServer(app).listen(app.get('port'), function(){

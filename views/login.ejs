@@ -1,0 +1,71 @@
+
+<style>
+
+input[type="text"]{
+    
+    border:1px solid #ddd;
+    height:26px;
+    width:300px;
+    border-radius: 7px;
+}
+
+input[type="password"]{
+    
+    border:1px solid #ddd;
+    height:26px;
+    width:300px;
+    border-radius: 7px;
+}
+
+input[type="submit"]{
+    
+   background: #001eff;
+color: wheat;
+border: 1px;
+width: 100px;
+height: 30px;
+}
+
+
+.page-data-login{
+    
+    margin-left: 311px;
+margin-top: 175px;
+margin: red;
+background: #063b09;
+width: 438px;
+padding-top: 18px;
+padding-bottom: 14px;
+}
+.label{
+    color: white;
+}
+
+</style>
+        <div class="page-data-login" 
+            
+            <form method="post" action="/user/login">
+                <table cellpadding="11">
+               
+                
+                <tr>
+                    <td class="label">Email</td><td>: <input type="text" name="email" required></td>
+                 </tr>
+
+                 <tr>
+                    <td class="label">Password</td><td>: <input type="password" name="password" required></td>
+                 </tr>
+                  
+                 <tr>
+                    <td class="label"></td>
+                    <td>
+                        &nbsp; <input type="submit" name="submit" value="Login">
+                       
+                    </td>
+                 </tr>
+                </table>
+            </form>
+            
+        </div>
+        
+
